@@ -35,9 +35,25 @@
 </head>
 <body>
     <div id="container">
+        <!-- filter content will be shown inside this -->
         <div id="filandcat">
-
+            <!-- tag to filter based on gender -->
+             <select name="genderfilter" id="filter_gender" onchange="filterprod()">
+               <option value="all">Gender</option>
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+            </select>
+             <!-- tag to filter based on gender -->
+             <!-- tag to filter based on brand -->
+             <select name="brandFilter" id="filter_brand" onchange="filterprod()">
+               <option value="all">None</option>
+               <option value="Clinique">Clinique</option>
+               <option value="Forest Essentials">Forest Essentials</option>
+             </select>
+             <!-- tag to filter based on brand -->
         </div>
+        <!-- filter content will be shown inside this -->
+        
         <div id="content">
 
         </div>

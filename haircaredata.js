@@ -216,10 +216,11 @@ let haircaredata = [
         skin_type: "Normal", 
     },
 ]
+let cartstore = JSON.parse(localStorage.getItem("cart_sephora")) || [];
 
 // Brand -> Aveda , Ouai ,Moroccanoil
 let content = document.getElementById("content");
-haircaredata.forEach(function(elem){
+haircaredata.forEach(function(elem,index){
     let prodBox = document.createElement("div");
     let image = document.createElement("img");
     let brand = document.createElement("h4");
@@ -229,4 +230,8 @@ haircaredata.forEach(function(elem){
     image.setAttribute("id","prodimg");
     prodBox.append(image,brand);
     content.append(prodBox);
+    if(index%4 == 0){
+          cartstore.push(elem);
+    }
 })
+localStorage.setItem("cart_sephora",JSON.stringify(cartstore));
