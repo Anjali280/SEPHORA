@@ -1,0 +1,227 @@
+body{
+    font-family: 'IBM Plex Sans', sans-serif;;
+ }
+ *>button{
+    cursor: pointer;
+ }
+ #container{
+    width: 32%;
+    height: auto;
+    margin: auto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    padding: 13px;
+    margin-top: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+ }
+ #credit{
+    display: flex;
+    width: 100%;
+    height: 40px;
+ }
+ #imgcredit{
+    width: 36px;
+    height: 36px;
+ }
+ #imgcredit>img{
+    width: 100%;
+    height: 100%;
+ }
+ #creditdiv2{
+    margin-left: 20px;
+ }
+ #internal1+div{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: rgb(168, 168, 168);
+ }
+ 
+ 
+ 
+ #net{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+ }
+ #imgnet{
+    width: 36px;
+    height: 36px;
+ }
+ #imgnet>img{
+    width: 100%;
+    height: 100%;
+ }
+ #netdiv2{
+    margin-left: 20px;
+ }
+ #internal2+div{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: rgb(168, 168, 168);
+ }
+ 
+ 
+ 
+ #wallet{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+ }
+ #imgwallet{
+    width: 36px;
+    height: 36px;
+ }
+ #imgwallet>img{
+    width: 100%;
+    height: 100%;
+ }
+ #walletdiv2{
+    margin-left: 20px;
+ }
+ #internal3+div{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: rgb(168, 168, 168);
+ }
+ 
+ 
+ 
+ #upi{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+ }
+ #imgupi{
+    width: 36px;
+    height: 36px;
+ }
+ #imgupi>img{
+    width: 100%;
+    height: 100%;
+ }
+ #upidiv2{
+    margin-left: 20px;
+ }
+ #internal4+div{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: rgb(168, 168, 168);
+ }
+ 
+ .popupcard{
+    width: 27%;
+    height: 650px;
+    box-shadow:  0 8px 10px -5px rgb(0 0 0 / 20%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 16px 24px 2px rgb(0 0 0 / 14%);
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 20px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+ }
+ .open-popup{
+    visibility:visible ;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 100%;
+ }
+ #cross{
+    background-color: rgb(216, 204, 204);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: black;
+    margin-left: 470px;
+    text-align: center;
+    padding-top: 5px;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 30px;
+ }
+ #carddetail{
+    display: flex;
+    width: 90%;
+    height: 30px;
+    padding: 20px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+ }
+ #carddetailsub2{
+    width: 45px;
+    height: 45px;
+ }
+ 
+ #carddetailsub11{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    color: rgb(31, 31, 31);
+ }
+ #carddetailsub11+div{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: rgb(102, 102, 102);
+ }
+ #inputcard{
+    width: 97%;
+    height: 55px;
+    border-radius: 4px;
+    border: 2px solid green;
+ }
+ #inputdiv{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+ }
+ #inputdiv>input{
+    height: 55px;
+    border-radius: 8px;
+    width: 45%;
+    border: 2px solid green;
+ }
+ #btnlower{
+    width: 90%;
+    padding: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background-color:green ;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 10px;
+    color: black;
+    box-sizing: border-box;
+ }

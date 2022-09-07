@@ -1,0 +1,15 @@
+.nav{
+    background-color: rgb(234, 238, 242);
+
+}
+img {
+    margin-left: 60px;
+}
+.second nav{
+    align-items: center;
+    background-color: blueviolet;
+    width: auto;
+    height: 40px;
+
+    
+}
