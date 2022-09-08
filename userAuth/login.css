@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  min-height: 100%;
+}
+
+#main {
+  justify-content: center;
+  display: flex;
+  padding: 200px;
+  padding-top: 150px;
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 10px 30px 30px 30px;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: 0.3px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  color: #656565;
+  font-size: small;
+  display: block;
+  margin-right: 130px;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+  padding: 9px;
+  border: 3px solid #ea0020;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.login {
+  background-color: #f39;
+  color: white;
+  font-weight: bold;
+  margin: 17px 0 32px;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  border: none;
+}
+
+h3 {
+  margin-top: 0;
+  background-color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.divider {
+  border-top: 1px solid #000;
+  height: 0;
+  padding: 1px;
+  margin: 0;
+  margin-left: 25px;
+  width: 80%;
+}
+
+.go,
+.fb {
+  padding: 10px 10px 10px 8px;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.go {
+  background-color: #4285f4;
+}
+
+.google {
+  background-color: white;
+  margin-right: 45px;
+}
+
+.fa-google {
+  background: conic-gradient(
+      from -45deg,
+      #ea4335 110deg,
+      #4285f4 90deg 180deg,
+      #34a853 180deg 270deg,
+      #fbbc05 270deg
+    )
+    73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+  margin-right: 35px;
+}
+
+.fb {
+  background-color: #3b5998;
+}
+
+p {
+  margin-top: 70px;
+  font-size: smaller;
+}
+
+span {
+  text-decoration: underline;
+  color: #ec008c;
+}
