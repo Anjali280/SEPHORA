@@ -66,6 +66,76 @@ body{
  #prodandcheck{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0% 8% 0% 8%;
+    margin: 40px 8% 0% 8%;
+    
  }
+#prodname{
+    /* border: 2px solid red; */
+    height: 13vh;
+    margin-top: -1vh;
+    width: 14vw;
+    height: fit-content;
+}
+#addtowhishlist{
+    margin-top: 0px;
+    font-size: .66667rem;
+    color: #686f7a;
+}
+#productcontent{
+    margin: 20px 5px 20px 5px;
+}
+#promoanssum{
+    display: grid;
+    grid-template-columns: 1 1fr;
+    height: fit-content;
+    
+      
+}
+#promocode{
+ text-align: center;
+ padding: 10px ;
+ margin-bottom: 15px;
+ background-color: #f2f2f2;
+}
+#ordersummary{
+margin: 30px 10px 30px 10px;
+padding: 15px;
+background-color: #f2f2f2;
 
+}
+#checkoutbutton{
+  
+}
+#lab{
+    margin-top: 0px;
+    font-size: .66667rem;
+    color: #686f7a;
+    margin-bottom: 50px;
+}
+#ordersummary > H4{
+    /* text-align: center; */
+}
+#box1{
+    display: flex;
+    height: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    
+}
+#box2{
+    display: flex;
+    height: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+@media (max-width:64em){
+    #prodname{
+        /* border: 2px solid red; */
+       height: 10vh;
+       margin-top: -1vh;
+       width: 10vw;
+       font-size: 12px;
+
+       
+    }
+}

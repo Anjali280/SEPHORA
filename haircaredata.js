@@ -1,4 +1,4 @@
-let haircaredata = [
+var haircare_array = [
     {
         tag: "Shampoo",
         image_url: "https://cdn14.nnnow.com/web-images/medium/styles/ZXCZQG4LPA2/1586865417849/1.jpg",
@@ -42,7 +42,7 @@ let haircaredata = [
         description: "Shampure™ Nurturing Shampoo",
         price: 1500,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Combination", 
     },
     {
         tag: "Shampoo",
@@ -51,7 +51,7 @@ let haircaredata = [
         description: "Nutriplenish™ Shampoo Light Moisture",
         price: 750,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Dry", 
     },
     {
         tag: "Shampoo",
@@ -60,7 +60,7 @@ let haircaredata = [
         description: "Invati Advanced™ Exfoliating Shampoo: Light",
         price: 2450,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Oily", 
     },
     {
         tag: "Shampoo",
@@ -87,7 +87,7 @@ let haircaredata = [
         description: "Cherry Almond Softening Conditioner",
         price: 1750,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Combination", 
     },
     {
         tag: "Conditioner",
@@ -96,7 +96,7 @@ let haircaredata = [
         description: "Cherry Almond Softening Leave-In Conditioner",
         price: 1750,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Dry", 
     },
     {
         tag: "Conditioner",
@@ -105,7 +105,7 @@ let haircaredata = [
         description: "Nutriplenish™ Conditioner Light Moisture",
         price: 750,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Oily", 
     },
     {
         tag: "Conditioner",
@@ -123,7 +123,7 @@ let haircaredata = [
         description: "Be Curly™ Conditioner",
         price: 2350,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Combination", 
     },
     {
         tag: "Conditioner",
@@ -132,7 +132,7 @@ let haircaredata = [
         description: "Shampure™ Conditioner",
         price: 750,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Dry", 
     },
     {
         tag: "Conditioner",
@@ -141,7 +141,7 @@ let haircaredata = [
         description: "Nutriplenish™ Conditioner Deep Moisture",
         price: 750,
         gender: "Male",
-        skin_type: "Normal", 
+        skin_type: "Oily", 
     },
     {
         tag: "HairStyling",
@@ -159,7 +159,7 @@ let haircaredata = [
         description: "Mending Infusion",
         price: 2700,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Combination", 
     },
     {
         tag: "HairStyling",
@@ -168,7 +168,7 @@ let haircaredata = [
         description: "Beach Wave Hair Mousse",
         price: 2160,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Oily", 
     },
     {
         tag: "HairStyling",
@@ -177,7 +177,7 @@ let haircaredata = [
         description: "Restorative Hair Mask",
         price: 3330,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Dry", 
     },
     {
         tag: "HairStyling",
@@ -195,7 +195,7 @@ let haircaredata = [
         description: "Wave Spray",
         price: 2200,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Combination", 
     },
     {
         tag: "HairStyling",
@@ -204,7 +204,7 @@ let haircaredata = [
         description: "Finishing Crème",
         price: 2700,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Dry", 
     },
     {
         tag: "HairStyling",
@@ -213,25 +213,147 @@ let haircaredata = [
         description: "Volume Spray",
         price: 2450,
         gender: "Female",
-        skin_type: "Normal", 
+        skin_type: "Oily", 
     },
 ]
-let cartstore = JSON.parse(localStorage.getItem("cart_sephora")) || [];
+
+//let cartstore = JSON.parse(localStorage.getItem("cart_sephora")) || [];
 
 // Brand -> Aveda , Ouai ,Moroccanoil
-let content = document.getElementById("content");
-haircaredata.forEach(function(elem,index){
-    let prodBox = document.createElement("div");
-    let image = document.createElement("img");
-    let brand = document.createElement("h4");
-    brand.innerText = (elem.brand).toUpperCase();
-    brand.setAttribute("id","brandname");
-    image.setAttribute("src",elem.image_url);
-    image.setAttribute("id","prodimg");
-    prodBox.append(image,brand);
-    content.append(prodBox);
-    if(index%4 == 0){
-          cartstore.push(elem);
+// let content = document.getElementById("content");
+// haircaredata.forEach(function(elem,index){
+//     let prodBox = document.createElement("div");
+//     let image = document.createElement("img");
+//     let brand = document.createElement("h4");
+//     brand.innerText = (elem.brand).toUpperCase();
+//     brand.setAttribute("id","brandname");
+//     image.setAttribute("src",elem.image_url);
+//     image.setAttribute("id","prodimg");
+//     prodBox.append(image,brand);
+//     content.append(prodBox);
+    // if(index%4 == 0){
+    //       cartstore.push(elem);
+    // }
+//})
+localStorage.setItem("haircare_products",JSON.stringify(haircare_array));
+var haircare_obj = JSON.parse(localStorage.getItem("haircare_products")) || [];
+display(haircare_obj);
+
+function display(hair_array){
+    console.log(hair_array);
+    // console.log(hair_array.length);
+    
+    document.getElementById("product_display").innerHTML = "";
+    hair_array.map(function(elem,index){
+        console.log(elem.brand);
+        var div2 = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",elem.image_url);
+        image.setAttribute("atl",elem.brand);
+        var name = document.createElement("h4");
+        name.innerText = elem.brand;
+        var info = document.createElement("p");
+        info.innerText = elem.description;
+        var value = document.createElement("h4");
+        value.innerText = elem.price; 
+        var add_to_cart = document.createElement("button");
+        add_to_cart.innerText = "Add to Cart";
+        add_to_cart.setAttribute("class","cart_bag");
+        add_to_cart.addEventListener("click",function(){
+            add_pro_cart_fun(elem);
+        });
+        var add_to_bag = document.createElement("button");
+        add_to_bag.innerText = "Add to Bag"; 
+        add_to_bag.addEventListener("click",function(){
+            add_pro_bag_fun(elem);
+        });
+        add_to_bag.setAttribute("class","cart_bag");
+        div2.append(image,name,info,value,add_to_cart,add_to_bag);
+        document.getElementById("product_display").append(div2);
+    });
+
+}
+
+var cartProducts = JSON.parse(localStorage.getItem("cart_products"))|| [];
+
+function add_pro_cart_fun(elem){
+      
+  cartProducts.push(elem);
+  localStorage.setItem("cart_products",JSON.stringify(cartProducts));
+}
+
+var bagProducts = JSON.parse(localStorage.getItem("bag_products"))|| [];
+
+function add_pro_bag_fun(elem){
+      
+  bagProducts.push(elem);
+  localStorage.setItem("bag_products",JSON.stringify(bagProducts));
+}
+
+function filter_fun(){
+    filter_gender_fun();
+    filter_brand_fun();
+    filter_skintype_fun();
+    sort_price_fun();
+    
+    var gender_filtered = haircare_obj;  
+    function filter_gender_fun(){
+        selected_gender = document.getElementById("filter_gender").value;
+        gender_filtered = haircare_obj.filter(function(elem){
+            if(selected_gender === "all"){
+                return 1;
+            }
+
+            return elem.gender === selected_gender;
+        });
+        
+        //display_skincare(gender_filtered);
     }
-})
-localStorage.setItem("cart_sephora",JSON.stringify(cartstore));
+
+    var brand_filtered = gender_filtered;
+    function filter_brand_fun(){
+        var selected_brand = document.getElementById("filter_brand").value;
+        brand_filtered = gender_filtered.filter(function(elem){
+            if(selected_brand === "all"){
+                return 1;
+            }
+            return elem.brand === selected_brand;
+        });
+        //console.log(brand_filtered);
+    }
+    //display_skincare(brand_filtered);
+
+    var skintype_filtered = brand_filtered;
+    function filter_skintype_fun(){
+        var selected_skintype = document.getElementById("filter_skin_type").value;
+        skintype_filtered = brand_filtered.filter(function(elem){
+            if(selected_skintype === "all"){
+                return 1;
+            }
+
+            return elem.skin_type === selected_skintype;
+        });
+        //display_fragrance(skintype_filtered);
+    }
+
+  
+    
+    function sort_price_fun(){
+        if(document.getElementById("sort_price").value == 'high'){
+            skintype_filtered.sort(function(a,b){
+            if(parseInt(a.price)>parseInt(b.price)) return -1;
+            if(parseInt(a.price)<parseInt(b.price)) return 1;
+            return 0;
+          });
+        }
+  
+        if(document.getElementById("sort_price").value == 'low'){
+            skintype_filtered.sort(function(a,b){
+            if(parseInt(a.price)>parseInt(b.price)) return 1;
+            if(parseInt(a.price)<parseInt(b.price)) return -1;
+            return 0;
+          }); 
+        }
+        display(skintype_filtered);
+      }
+}
