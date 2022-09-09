@@ -9,7 +9,7 @@ var makeup_array = [
         brand: "Huda Beauty",
         description: "Easy Bake Loose Setting Powder Mini - Banana Bread",
         price: 1650,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Combination",
     },
     {
@@ -18,7 +18,7 @@ var makeup_array = [
         brand: "Benefit Cosmetics",
         description: "The POREfessional Face Primer",
         price: 1240,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Normal",
     },
     {
@@ -36,7 +36,7 @@ var makeup_array = [
         brand: "Huda Beauty",
         description: "Overachiever Concealer - 24G Peanut Butter",
         price: 2520,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Dry",
     },
     {
@@ -82,7 +82,7 @@ var makeup_array = [
         brand: "Benefit Cosmetics",
         description: "Precisely, My Brow Pencil - 3.75 - Warm Medium Brown",
         price: 2390,
-        gender: "Feale",
+        gender: "Male",
         skin_type: "Normal",
     },
     {
@@ -118,7 +118,7 @@ var makeup_array = [
         brand: "Sephora Collection",
         description: "Colorblock Felt Eye Liner - 01 Ink Splash",
         price: 1000,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Normal",
     },
     {
@@ -145,7 +145,7 @@ var makeup_array = [
         brand: "Sephora Collection",
         description: "Intense Ink Waterproof Liquid Eyeliner - 01 Satin Deep Black",
         price: 1320,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Combination",
     },
     {
@@ -172,7 +172,7 @@ var makeup_array = [
         brand: "Sephora Collection",
         description: "Lip Scrub - Dragon Fruit",
         price: 592,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Normal",
     },
     {

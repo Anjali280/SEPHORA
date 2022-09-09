@@ -149,7 +149,7 @@ var haircare_array = [
         brand: "Sephora collection",
         description: "Protective Hair Oil With Moringa Oil",
         price: 2000,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Normal", 
     },
     {
@@ -158,7 +158,7 @@ var haircare_array = [
         brand: "Moroccanoil",
         description: "Mending Infusion",
         price: 2700,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Combination", 
     },
     {
@@ -167,7 +167,7 @@ var haircare_array = [
         brand: "Moroccanoil",
         description: "Beach Wave Hair Mousse",
         price: 2160,
-        gender: "Female",
+        gender: "Male",
         skin_type: "Oily", 
     },
     {

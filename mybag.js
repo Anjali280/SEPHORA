@@ -6,6 +6,17 @@ function display(cartstore){
     let prodlist = document.getElementById("prodlist");
         prodlist.innerHTML = "";
                 var sum = 0;
+
+                if(cartstore.length == 0){
+                    var img = document.createElement("img");
+                    img.setAttribute("src","https://img.freepik.com/premium-psd/shopping-trolley-cart_207928-55.jpg?w=1380");
+                    img.style.width = "400px";
+                    img.style.height = "400px";
+                    
+                    prodlist.append(img);
+                }
+
+                
     cartstore.forEach(function(elem,index) {
         
 
@@ -83,7 +94,7 @@ function display(cartstore){
         
     }) 
 
-
+                
         // var summary = document.getElementById("checkoutbutton");
         // summary.innerText = "";
         // var sumshow = document.createElement("h4");
@@ -148,5 +159,12 @@ if(logintrue == "true"){
 }
 
 function redirtologin(){
-    document.getElementById("logindetailsp").innerHTML = "redirected";
+    //document.getElementById("logindetailsp").innerHTML = "redirected";
+    
+}
+document.getElementById("checkoutbutton").addEventListener("click",gotoaddress);
+function gotoaddress(){
+    
+    window.location.href = "address.html";
+   
 }
