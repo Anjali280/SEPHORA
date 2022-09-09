@@ -1,0 +1,92 @@
+.style1,
+.style2 {
+  padding: 20px 120px;
+}
+.style1 > h2 {
+  text-align: center;
+  color: #656565;
+  margin: 0 0 20px;
+  width: 100%;
+  padding: 0 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+.style1 > p,
+.style2 > p {
+  margin: 0;
+  width: 100%;
+  padding: 0 0 15px;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: #656565;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.style2 > h3 {
+  text-align: center;
+  color: #656565;
+  margin: 0 0 20px;
+  width: 100%;
+  padding: 0 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.32rem;
+  letter-spacing: 0.2px;
+  font-weight: 490;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  margin: auto 18px;
+  padding: 3px 3px;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.style5 > ul > li > a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  font-weight: lighter;
+}
+
+.style6 {
+  padding: 20px 120px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.style6 > h3 {
+  text-align: center;
+  font-size: medium;
+}
+
+.style6 > p {
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.7rem;
+  color: #000;
+}
+
+.style2 {
+    padding-top: 0;
+}
+.style3 > ul > li > a{
+    font-size:medium;
+}
