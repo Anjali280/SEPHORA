@@ -33,7 +33,7 @@ function display_skincare(skin_array){
             add_pro_bag_fun(elem);
         });
         add_to_bag.setAttribute("class","cart_bag");
-        div2.append(image,name,info,div3,add_to_cart,add_to_bag);
+        div2.append(image,name,info,div3,add_to_cart);
         document.getElementById("product_display").append(div2);
     });
 
