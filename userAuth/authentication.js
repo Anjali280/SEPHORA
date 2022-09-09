@@ -25,6 +25,8 @@ function register() {
 
   const myForm = document.getElementById("createAcc");
   myForm.reset();
+  window.location.href="../index.html";
+  alert(user_obj.name+"! Your account has been created");
 }
 
 function login() {
@@ -63,6 +65,8 @@ function auth() {
   let pwd = document.getElementById("pwd").value;
 
   if (user.password === pwd) {
+    window.location.href="../index.html";
+    
     alert("Welcome " + user.name + "!!, You are logged in successfully");
   } else {
     window.location.href = "login.html";

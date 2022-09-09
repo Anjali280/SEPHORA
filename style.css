@@ -98,7 +98,9 @@
   to {opacity: 1}
 }
 
-
+#submenu{
+  z-index: 1;
+}
 /* Dropdown starts */
 
 /* Dropdown Button */
@@ -442,14 +444,7 @@ a {
   width: 80%;
   margin: auto;
 }
-input {
-  width: 15vw;
-  height: 5vh;
-  /* border-radius: 7px; */
-  border: none;
-  border-bottom: 1px solid black;
-  /* border-style: unset; */
-}
+
 i {
   color: #f38;
 }
@@ -601,6 +596,7 @@ div > h1 {
   margin-top: 15px;
   gap: 30px;
 }
+
 @media only screen and (min-width: 670px) and (max-width: 1000px) {
   #top_bar {
     display: none;

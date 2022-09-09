@@ -34,12 +34,12 @@ function display_fragrance(frag_array){
 
 }
 
-var cartProducts = JSON.parse(localStorage.getItem("cart_sephora"))|| [];
+var cartProducts = JSON.parse(localStorage.getItem("cart_products"))|| [];
 
 function add_pro_cart_fun(elem){
       
   cartProducts.push(elem);
-  localStorage.setItem("cart_sephora",JSON.stringify(cartProducts));
+  localStorage.setItem("cart_products",JSON.stringify(cartProducts));
 }
 
 var bagProducts = JSON.parse(localStorage.getItem("whislist_sephora"))|| [];
@@ -122,7 +122,7 @@ var fragrance_array = [
         image_url : "https://cdn16.nnnow.com/web-images/medium/styles/YH3FKFOQIBK/1655184233762/1.jpg",
         brand : "Dior",
         description : "Miss dior eau de parfume",
-        price : "10099",
+        price : 10099,
         size : "100",
         skin_type : "Normal",
     },
@@ -131,7 +131,7 @@ var fragrance_array = [
         image_url : "https://cdn04.nnnow.com/web-images/medium/styles/1FKGIZZQQT8/1637735288244/1.jpg",
         brand : "Dior",
         description : "ure poison eau de parfume",
-        price : "99999",
+        price : 99999,
         size : "150",
         skin_type : "Normal",
     },
@@ -140,7 +140,7 @@ var fragrance_array = [
         image_url : "https://cdn14.nnnow.com/web-images/medium/styles/GX1INCBAMS6/1487245292188/1.jpg",
         brand : "Forest Essentials",
         description : "Cool water sea rose eau de toilette",
-        price : "6099",
+        price : 6099,
         size : "200",
         skin_type : "dry",
     },
@@ -149,7 +149,7 @@ var fragrance_array = [
         image_url : "https://cdn03.nnnow.com/web-images/medium/styles/P4FI87Z9XKE/1607690426098/1.jpg",
         brand : "Forest Essentials",
         description : "My fifth avenue de parfume",
-        price : "5599",
+        price : 5599,
         size : "100",
         skin_type : "Oily",
     },
@@ -158,7 +158,7 @@ var fragrance_array = [
         image_url : "https://cdn14.nnnow.com/web-images/medium/styles/JNDWBL8HTUR/1605083781849/1.jpg",
         brand : "Forest Essentials",
         description : "5th avenue eau de parfume",
-        price : "4999",
+        price : 4999,
         size : "150",
         skin_type : "Combination",
     },
@@ -167,7 +167,7 @@ var fragrance_array = [
         image_url : "https://cdn17.nnnow.com/web-images/medium/styles/KW1A17FQVOD/1496292880002/1.jpg",
         brand : "Clinique",
         description : "Pleasures eau de parfume",
-        price : "5999",
+        price : 5999,
         size : "200",
         skin_type : "Oily",
     },
@@ -179,7 +179,7 @@ var fragrance_array = [
         image_url : "https://cdn16.nnnow.com/web-images/medium/styles/EF52ORZ4CS9/1637736332494/1.jpg",
         brand : "Dior",
         description : "Homme intense eau de parfume",
-        price : "7999",
+        price : 7999,
         size : "100",
         skin_type : "Oily",
     },
@@ -188,7 +188,7 @@ var fragrance_array = [
         image_url : "https://cdn02.nnnow.com/web-images/medium/styles/T0RTJDW68XH/1637735756306/1.jpg",
         brand : "Dior",
         description : "Eau sauvage eau de toilette",
-        price : "8099",
+        price : 8099,
         size : "150",
         skin_type : "Dry",
     },
@@ -197,7 +197,7 @@ var fragrance_array = [
         image_url : "https://cdn15.nnnow.com/web-images/medium/styles/YRLW7QZFTEA/1637735894017/1.jpg",
         brand : "Dior",
         description : "Sauvage parfume",
-        price : "1099",
+        price : 1099,
         size : "200",
         skin_type : "Dry",
     },
@@ -206,7 +206,7 @@ var fragrance_array = [
         image_url : "https://cdn03.nnnow.com/web-images/medium/styles/V1Q5H9E07BM/1604476359414/1.jpg",
         brand : "Clinique",
         description : "Clinique eau de toilette",
-        price : "8999",
+        price : 8999,
         size : "100",
         skin_type : "Normal",
     },
@@ -216,7 +216,7 @@ var fragrance_array = [
         image_url : "https://cdn02.nnnow.com/web-images/medium/styles/2XR0S3IS5BE/1487245292170/1.jpg",
         brand : "Clinique",
         description : "Clinique Euphoria eau de toilette",
-        price : "5999",
+        price : 5999,
         size : "150",
         skin_type : "Normal",
     },
@@ -224,8 +224,8 @@ var fragrance_array = [
         tag : "MEN",
         image_url : "https://cdn03.nnnow.com/web-images/medium/styles/O23NQ2FZELN/1614232406460/1.jpg",
         brand : "Forest Essentials",
-        description : "",
-        price : "6599",
+        description : "forrest essential",
+        price : 6599,
         size : "200",
         skin_type : "Combination",
     },
