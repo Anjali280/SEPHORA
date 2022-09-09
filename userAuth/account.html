@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div id="account">
+        <h1>
+          CREATE <br />
+          ACCOUNT
+        </h1>
+
+        <form id="createAcc">
+          <label for="">Name*</label>
+          <div class="two">
+            <div>
+              <select name="" id="prefix">
+                <option value="Select">Select</option>
+                <option value="Mr">Mr</option>
+                <option value="Ms">Ms</option>
+              </select>
+            </div>
+            <div>
+              <input type="text" name="" id="nm" />
+            </div>
+          </div>
+
+          <label for="">Email*</label>
+          <input type="email" name="" id="email" />
+
+          <label for="">Password*</label>
+          <input type="password" name="" id="pwd" />
+
+          <label for="">Phone Number*</label>
+          <input type="text" name="" id="phone" />
+
+          <input type="button" value="CONTINUE" onclick="register()" />
+        </form>
+      </div>
+    </div>
+
+    <script src="authentication.js"></script>
+  </body>
+</html>

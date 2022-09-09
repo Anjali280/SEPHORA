@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="container">
+        <form id="verifyUser" action="password.html">
+          <h2>LOGIN</h2>
+
+          <label for="username">Enter your Phone / Email</label>
+          <input type="text" id="username" />
+
+          <button class="login" onclick="login()">CONTINUE</button>
+
+          <div>
+            <div class="divider"></div>
+            <h3>Or</h3>
+          </div>
+
+          <div class="social">
+            <div class="go">
+              <div class="google"><i class="fab fa-google"></i></div>
+              Continue with Google
+            </div>
+            <div class="fb">
+              <div class="facebook"><i class="fab fa-facebook-square"></i></div>
+              Continue with Facebook
+            </div>
+          </div>
+
+          <div>
+            <p>
+              By proceeding, you agree to <span>Privacy Policy</span>, <br />
+              <span>Terms & Conditions</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="authentication.js"></script>
+  </body>
+</html>
