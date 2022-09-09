@@ -15,7 +15,7 @@ function display_fragrance(frag_array){
         var info = document.createElement("p");
         info.innerText = elem.description;
         var value = document.createElement("h4");
-        value.innerText = elem.price; 
+        value.innerText = "Rs. " + elem.price; 
         var add_to_cart = document.createElement("button");
         add_to_cart.innerText = "Add to Cart";
         add_to_cart.setAttribute("class","cart_bag");
@@ -28,26 +28,26 @@ function display_fragrance(frag_array){
             add_pro_bag_fun(elem);
         });
         add_to_bag.setAttribute("class","cart_bag");
-        div2.append(image,name,info,value,add_to_cart,add_to_bag);
+        div2.append(image,name,info,value,add_to_cart);
         document.getElementById("product_display").append(div2);
     });
 
 }
 
-var cartProducts = JSON.parse(localStorage.getItem("cart_products"))|| [];
+var cartProducts = JSON.parse(localStorage.getItem("cart_sephora"))|| [];
 
 function add_pro_cart_fun(elem){
       
   cartProducts.push(elem);
-  localStorage.setItem("cart_products",JSON.stringify(cartProducts));
+  localStorage.setItem("cart_sephora",JSON.stringify(cartProducts));
 }
 
-var bagProducts = JSON.parse(localStorage.getItem("bag_products"))|| [];
+var bagProducts = JSON.parse(localStorage.getItem("whislist_sephora"))|| [];
 
 function add_pro_bag_fun(elem){
       
   bagProducts.push(elem);
-  localStorage.setItem("bag_products",JSON.stringify(bagProducts));
+  localStorage.setItem("whislist_sephora",JSON.stringify(bagProducts));
 }
 
 function filter_fun(){

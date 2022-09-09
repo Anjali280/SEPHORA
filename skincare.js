@@ -14,8 +14,13 @@ function display_skincare(skin_array){
         name.innerText = elem.brand;
         var info = document.createElement("p");
         info.innerText = elem.description;
+        var div3 = document.createElement("div");
+        div3.setAttribute("id","rupees_value")
+        var rupees = document.createElement("h4");
+        rupees.innerText = "Rs. - ";
         var value = document.createElement("h4");
-        value.innerText = elem.price; 
+        value.innerText = elem.price;
+        div3.append(rupees,value); 
         var add_to_cart = document.createElement("button");
         add_to_cart.innerText = "Add to Cart";
         add_to_cart.setAttribute("class","cart_bag");
@@ -28,7 +33,7 @@ function display_skincare(skin_array){
             add_pro_bag_fun(elem);
         });
         add_to_bag.setAttribute("class","cart_bag");
-        div2.append(image,name,info,value,add_to_cart,add_to_bag);
+        div2.append(image,name,info,div3,add_to_cart,add_to_bag);
         document.getElementById("product_display").append(div2);
     });
 
