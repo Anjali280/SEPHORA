@@ -80,6 +80,10 @@ body{
     margin-top: 0px;
     font-size: .66667rem;
     color: #686f7a;
+    text-decoration: underline;
+}
+#addtowhishlist:hover{
+    font-size: .76667rem;
 }
 #productcontent{
     margin: 20px 5px 20px 5px;
@@ -104,29 +108,74 @@ background-color: #f2f2f2;
 
 }
 #checkoutbutton{
-  
+  margin: -10px 10px 30px 10px;
+  padding: 12px 0px 12px 0px;
+  background-color: #ff3399;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+}
+#checkoutbutton:hover{
+    font-weight: 900;
 }
 #lab{
     margin-top: 0px;
-    font-size: .66667rem;
+    font-size: .76667rem;
     color: #686f7a;
     margin-bottom: 50px;
 }
+#lab2{
+    margin-top: 0px;
+    font-size: .76667rem;
+    color: #ff3399;
+    margin-bottom: 50px;
+}
+
 #ordersummary > H4{
     /* text-align: center; */
+}
+#priceshow{
+    font-size: .86667rem;
+}
+#afterdiscountprice{
+    font-size: .76667rem;
+    color: #ff3399;
 }
 #box1{
     display: flex;
     height: 20px;
     margin-bottom: 10px;
     justify-content: space-between;
+    /* color: #ff3399; */
     
+}
+#couponint{
+    border: 0px;
+    border-radius: 4px;
 }
 #box2{
     display: flex;
     height: 20px;
     margin-bottom: 10px;
     justify-content: space-between;
+    font-weight: bolder;
+    /* line-height: 15px; */
+}
+#addmore{
+    font-size: .76667rem;
+}
+#addmore:hover{
+    font-size: .86667rem;
+}
+#thirdbox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+#boxprodprice{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 @media (max-width:64em){
     #prodname{

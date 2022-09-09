@@ -2,7 +2,7 @@ let cartstore = JSON.parse(localStorage.getItem("cart_products")) || [];
 console.log(cartstore);
 display(cartstore);
 function display(cartstore){
-
+    document.getElementById("numberofproducts").innerHTML = "("+cartstore.length+")";
     let prodlist = document.getElementById("prodlist");
         prodlist.innerHTML = "";
                 var sum = 0;
@@ -47,7 +47,11 @@ function display(cartstore){
         let indiv3 = document.createElement("div");
         let qtybox = document.createElement("div");
         let qty = document.createElement("p");
-        qty.innerText = "Qty:";
+        qty.innerText = "Add more";
+        qty.addEventListener("click",function(){
+            addeletolist(elem);
+        })
+        qty.setAttribute("id","addmore");
         qtybox.append(qty);
         indiv3.append(qtybox);
         indiv3.setAttribute("id","thirdbox");
@@ -58,6 +62,7 @@ function display(cartstore){
         let pricebox = document.createElement("div");
         let price = document.createElement("h5");
         price.innerText = "Rs." + elem.price;
+        price.setAttribute("id","boxprodprice");
         pricebox.append(price);
         indiv4.append(pricebox);
         indiv4.setAttribute("id","fourthbox");
@@ -84,8 +89,8 @@ function display(cartstore){
         // var sumshow = document.createElement("h4");
         // sumshow.innerText = sum;
         // summary.append(sumshow);
-        document.getElementById("priceshow").innerText = sum;
-        document.getElementById("finalprice").innerText = sum;
+        document.getElementById("priceshow").innerText =  sum;
+        document.getElementById("finalprice").innerText =  sum;
 }
 // implement move to favourite and remove button and functionality
 // deign and implement right part of the checkout bar
@@ -94,6 +99,7 @@ function display(cartstore){
 function addToWhishlist(index){
     cartstore.splice(index,1);
     display(cartstore);
+    document.getElementById("afterdiscountprice").innerText ="Rs."+ 0;
     localStorage.setItem("cart_products",JSON.stringify(cartstore));
 }
 
@@ -104,7 +110,43 @@ function addToWhishlist(index){
         var currprice = document.getElementById("priceshow").innerText;
         var discountprice = Number(currprice) * 3/10;
         var finalprice = currprice - discountprice;
-        document.getElementById("afterdiscountprice").innerText = discountprice;
+        document.getElementById("afterdiscountprice").innerText ="- Rs."+ discountprice;
         document.getElementById("finalprice").innerText = finalprice;
+    }else if(coupcont === "BEAUTY10" || coupcont === "beauty10"){ 
+        var currprice = document.getElementById("priceshow").innerText;
+        var discountprice = Number(currprice) * 1/10;
+        var finalprice = currprice - discountprice;
+        document.getElementById("afterdiscountprice").innerText ="- Rs."+ discountprice;
+        document.getElementById("finalprice").innerText = finalprice;
+    }else{
+        alert("Enter Valid code");
     }
  }
+ document.getElementById("checkoutbutton").addEventListener("click",setFinalPrice);
+function setFinalPrice(){
+    var totprice = document.getElementById("finalprice").innerHTML;
+    localStorage.setItem("checkoutprice",totprice);
+    
+}
+
+function addeletolist(elem){
+    cartstore.push(elem);
+    display(cartstore);
+    localStorage.setItem("cart_products",JSON.stringify(cartstore));
+}
+// windows.location.herf = "";
+localStorage.setItem("logindetail","false");
+localStorage.setItem("curruser","hari");
+
+var logintrue = localStorage.getItem("logindetail") || "false";
+if(logintrue == "true"){
+    var curruser = localStorage.getItem("curruser");
+    document.getElementById("logindetailsp").innerHTML = curruser;
+}else{
+    document.getElementById("logindetailsp").innerHTML = "Login";
+     document.getElementById("logindetails").addEventListener("click",redirtologin);
+}
+
+function redirtologin(){
+    document.getElementById("logindetailsp").innerHTML = "redirected";
+}

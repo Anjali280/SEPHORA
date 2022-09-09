@@ -255,7 +255,7 @@ function display(hair_array){
         var info = document.createElement("p");
         info.innerText = elem.description;
         var value = document.createElement("h4");
-        value.innerText = elem.price; 
+        value.innerText = "Rs. "+ elem.price; 
         var add_to_cart = document.createElement("button");
         add_to_cart.innerText = "Add to Cart";
         add_to_cart.setAttribute("class","cart_bag");
@@ -268,7 +268,7 @@ function display(hair_array){
             add_pro_bag_fun(elem);
         });
         add_to_bag.setAttribute("class","cart_bag");
-        div2.append(image,name,info,value,add_to_cart,add_to_bag);
+        div2.append(image,name,info,value,add_to_cart);
         document.getElementById("product_display").append(div2);
     });
 
@@ -356,4 +356,10 @@ function filter_fun(){
         }
         display(skintype_filtered);
       }
+}
+
+// go to top button function
+function gotoTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

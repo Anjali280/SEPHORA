@@ -547,7 +547,7 @@ var makeup_array = [
                 add_pro_bag_fun(elem);
             });
             add_to_bag.setAttribute("class","cart_bag");
-            div2.append(image,name,info,value,add_to_cart,add_to_bag);
+            div2.append(image,name,info,value,add_to_cart);
             document.getElementById("product_display").append(div2);
         });
     
@@ -637,3 +637,7 @@ var makeup_array = [
           }
     }
     
+    function gotoTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
