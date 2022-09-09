@@ -1,0 +1,245 @@
+
+
+
+
+*{
+    font-family: sans-serif;
+}
+#create{
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      
+}
+#overview{
+    padding: 30px;
+    background-color:  #f2f2f2;
+}
+#parent{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: auto;
+    gap: 30px;
+    margin-top: 30px;
+}
+#tworow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+}
+#left{
+    background-color:  #f2f2f2;
+}
+#left > div{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  }
+body  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form > input{
+    margin-top: 10px;
+    padding: 5px;
+  }
+  form > select{
+    margin-top: 10px;
+    padding: 5px;
+  }
+#mybagnav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 100px; */
+    grid-template-rows: 40px;
+    /* border: 2px solid red; */
+    margin-left: 8%;
+    margin-right: 8%;
+}
+body{
+    margin: 0;
+    margin-top: 5px;
+}
+#img-cnt-clickable > img{
+    max-height: 40px;
+    align-items: center;
+}  
+#logindetails{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+#simplenav{
+    background-color: #1F85DE;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    /* width:fit-content; */
+}
+#simplenav > div{
+    margin-left: 8%;
+}
+#mybagcount{
+    margin: auto;
+    /* margin-left: 8%; */
+    /* background-color: red; */
+    align-items: center;
+    color: white;
+    width: max-content;
+}
+#productcontent{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: 100px;
+}
+#smallimage{
+    
+    height: 100%;
+    
+}
+#firstbox{
+    display: flex;
+    justify-content: center;
+}
+/* body > div{
+    display: flex;
+    align-items: center;
+    max-height: 40px;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+ } */
+ #prodandcheck{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 40px 8% 0% 8%;
+    
+ }
+#prodname{
+    /* border: 2px solid red; */
+    height: 13vh;
+    margin-top: -1vh;
+    width: 14vw;
+    height: fit-content;
+}
+#addtowhishlist{
+    margin-top: 0px;
+    font-size: .66667rem;
+    color: #686f7a;
+    text-decoration: underline;
+}
+#addtowhishlist:hover{
+    font-size: .76667rem;
+}
+#productcontent{
+    margin: 20px 5px 20px 5px;
+}
+#promoanssum{
+    display: grid;
+    grid-template-columns: 1 1fr;
+    height: fit-content;
+    
+      
+}
+#promocode{
+ text-align: center;
+ padding: 10px ;
+ margin-bottom: 15px;
+ background-color: #f2f2f2;
+}
+#ordersummary{
+margin: 30px 10px 30px 10px;
+padding: 15px;
+background-color: #f2f2f2;
+
+}
+#checkoutbutton{
+  margin: 30px 10px 30px 10px;
+  padding: 12px 0px 12px 0px;
+  background-color: #ff3399;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+}
+#checkoutbutton:hover{
+    font-weight: 900;
+}
+#lab{
+    margin-top: 0px;
+    font-size: .76667rem;
+    color: #686f7a;
+    margin-bottom: 50px;
+}
+#lab2{
+    margin-top: 0px;
+    font-size: .76667rem;
+    color: #ff3399;
+    margin-bottom: 50px;
+}
+
+#ordersummary > H4{
+    /* text-align: center; */
+}
+#priceshow{
+    font-size: .86667rem;
+}
+#afterdiscountprice{
+    font-size: .76667rem;
+    color: #ff3399;
+}
+#box1{
+    display: flex;
+    height: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    /* color: #ff3399; */
+    
+}
+#couponint{
+    border: 0px;
+    border-radius: 4px;
+}
+#box2{
+    display: flex;
+    height: 20px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    font-weight: bolder;
+    /* line-height: 15px; */
+}
+#addmore{
+    font-size: .76667rem;
+}
+#addmore:hover{
+    font-size: .86667rem;
+}
+#thirdbox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+#boxprodprice{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+@media (max-width:64em){
+    #prodname{
+        /* border: 2px solid red; */
+       height: 10vh;
+       margin-top: -1vh;
+       width: 10vw;
+       font-size: 12px;
+
+       
+    }
+}
