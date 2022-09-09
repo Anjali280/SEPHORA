@@ -1,26 +1,17 @@
-sendOtp();
-let otp;
-function sendOtp(){
-    setTimeout(()=>{
-        otp = Math.floor(Math.random() * 900000) + 99999;
-        alert(otp);
-    },3000)
-}
-
-
-
-
-document.querySelector("#btnpay").addEventListener("click",funbtn)
-
-function funbtn () {
-var enteredOtp = document.getElementById("input1").value;
-
-if(otp == enteredOtp){
-        document.getElementById("errorMsg").textContent = "";
-        
-        window.location.href="orderplaced.html"
-}
-else{
-        document.getElementById("errorMsg").textContent = "Invalid OTP";
-     }
+document.getElementById("enterOtp").addEventListener("click", getOtp);
+function getOtp(){
+    event.preventDefault();
+    var otp = document.getElementById("otpInput").value;
+    console.log(otp);
+    if(otp == 703865){
+        window.location.href = "order.html";
+        // localStorage.setItem("orderOtp", otp);
+        // console.log(otp)
     }
+    else if(otp == ""){
+        alert("Enter OTP !");
+    }
+    else{
+        alert("Wrong OTP !");
+    }
+}
