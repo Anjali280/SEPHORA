@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ship product to</title>
+    <!-- <style>
+      /* Write all necessery styles here  */
+      body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      body  div{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin: 20px;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      form > input{
+        margin-top: 10px;
+        padding: 5px;
+      }
+      form > select{
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      body  form {
+        display: flex;
+        flex-direction: column;
+      }
+      body > table{
+        border: 1px solid;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-bottom: 100px;
+      }
+      th , td{
+        padding: 15px;
+        text-align: center;
+      }
+      body > table > thead{
+        background-color: yellow;
+      }
+    </style> -->
+    <link rel="stylesheet" href="address.css">
+  </head>
+  <body>
+    <!-- first navbar -->
+    <div id="mybagnav">
+      <div id="brandname">
+          <div id="img-cnt-clickable">
+              <img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="">
+          </div>
+      </div>
+      <div id="logindetails">
+            <p id="logindetailsp"></p>
+      </div>
+  </div>
+  <!-- first navbar -->
+  <!-- second navbar -->
+  <div id="simplenav">
+     <div>
+       <h3 id="mybagcount">DELIVERY ADDRESS <span id="numberofproducts"></span></h3>
+     </div>
+  </div>
+  <!-- second navbar -->
+   <div id="tworow">
+    <div id="left">
+      <div id="create">
+        <h1>Enter your details</h1>
+        <form>
+          <input placeholder="Enter your Name" id="name1" type="text" required/>
+          <input placeholder="Mobile Number" id="name6" type="number" required/>
+          <input placeholder="Address 1" id="name2" type="text" required/>
+          <input placeholder="Address 2" id="name3" type="text" required/>
+          <input placeholder="PIN CODE" id="name4" type="number" required/>
+          <input placeholder="State" id="name5" type="text" required/>
+          
+          
+          <input type="submit" value="Confirm" id="checkoutbutton"/>
+          
+       
+  
+        </form>
+      </div>
+    </div>
+    <div id="right">
+      <div id="promoanssum">
+        <!-- <div id="promocode">
+           <input type="text" id="couponint" placeholder="Enter Promo code">
+           <button id="couponbut">Check</button>
+        </div> -->
+        <div id="ordersummary">
+            <H4>OVERVIEW</H4>
+            <!-- <DIV id="box1">
+               <Label id="lab">Subtotal</Label>
+               <span id="priceshow"></span>
+            </DIV>
+            <div id="box1">
+               <label id="lab2">Discount</label>
+               <span id="afterdiscountprice">0</span>
+            </div> -->
+            <hr>
+            <div id="box2">
+               <label for="">Total</label>
+               <span id="finalprice2">Rs.<span id="finalprice">0</span></span>
+            </div>
+            
+        </div>
+        
+           
+        </button>
+    </div>
+    </div>
+   </div>
+    
+   
+  </body>
+ 
+</html>
+<script src="address.js">
+
+</script>

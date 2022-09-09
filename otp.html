@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: fit-content;
+            margin: auto;
+        }
+        #centerit{
+           margin-top: 100px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+           padding: 20px;
+        }
+        input{
+    margin-top: 10px;
+    padding: 5px;
+  }
+  #checkoutbutton{
+  margin: 30px 10px 30px 10px;
+  padding: 12px 0px 12px 0px;
+  background-color: #ff3399;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+  display: block;
+  width: 100px;
+}
+    </style>
+</head>
+<body>
+    <div id="centerit">
+        <form >
+            <h4>OTP is sent to <span id="showphonenumber"></span></h4>
+            <input type="number" placeholder="Enter 4 Digit number" id="otptext">
+            <input type="submit" value="Enter" id="checkoutbutton">
+        </form>
+        <p id="result"></p>
+        
+    </div>
+</body>
+</html>
+<script src="otp.js">
+
+</script>
