@@ -3,6 +3,7 @@
   margin: auto;
   margin-top: 20px;
   margin-bottom: 15px;
+  margin-left: 150px;
 }
 #product_display > div {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; /*changes*/
