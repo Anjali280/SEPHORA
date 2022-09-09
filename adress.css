@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #f7f9fa, #f8f7f9);
+padding: 10px;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #eaeff3;
+    padding: 25px 30px;
+    border-radius: 5px;
+
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0 12px 0;
+
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+ 
+}
+.user-details .input-box .details{
+    display: block;
+    height: 45px;
+    width: 100%;
+}
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.button{
+    
+    
+    justify-content: center;
+    align-items: center;
+    margin-left: 280px;
+    margin-bottom: 10px;
+   
+}
+.boxx{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(237, 69, 69);
+    color: white;
+    border-top: rgb(217, 59, 59);
+}
