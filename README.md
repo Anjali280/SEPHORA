@@ -12,11 +12,16 @@ Kajal Yadav
 Ramiz
 Anjali Mondal
 Hari Prasanth
-Tech Stack:
-   
+
+##Tech Stack:-
+
 
 ###Features:
-Signin/Signup
-Product Discovery Page
+HomePage/landingpage
+Signup/login
+Product Page
 Product Cart and Checkout Page
-Payment gateway Integration
+Payment
+
+
+#Snapshot of our Project
