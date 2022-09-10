@@ -1,126 +1,3 @@
-
-var skincare_obj = JSON.parse(localStorage.getItem("skincare_products")) || [];
-display_skincare(skincare_obj);
-
-function display_skincare(skin_array){
-    console.log(skin_array);
-    document.getElementById("product_display").innerHTML = "";
-    skin_array.map(function(elem,index){
-        var div2 = document.createElement("div");
-        var image = document.createElement("img");
-        image.setAttribute("src",elem.image_url);
-        image.setAttribute("atl",elem.brand);
-        var name = document.createElement("h4");
-        name.innerText = elem.brand;
-        var info = document.createElement("p");
-        info.innerText = elem.description;
-        var div3 = document.createElement("div");
-        div3.setAttribute("id","rupees_value")
-        // var rupees = document.createElement("h4");
-        // rupees.innerText = "Rs. - ";
-        var value = document.createElement("h4");
-        value.innerText = "Rs. " + elem.price;
-        // div3.append(rupees,value); 
-        var add_to_cart = document.createElement("button");
-        add_to_cart.innerText = "Add to Cart";
-        add_to_cart.setAttribute("class","cart_bag");
-        add_to_cart.addEventListener("click",function(){
-            add_pro_cart_fun(elem);
-        });
-        var add_to_bag = document.createElement("button");
-        add_to_bag.innerText = "Add to Bag"; 
-        add_to_bag.addEventListener("click",function(){
-            add_pro_bag_fun(elem);
-        });
-        add_to_bag.setAttribute("class","cart_bag");
-        div2.append(image,name,info,value,add_to_cart);
-        document.getElementById("product_display").append(div2);
-    });
-
-}
-
-var cartProducts = JSON.parse(localStorage.getItem("cart_products"))|| [];
-
-function add_pro_cart_fun(elem){
-      
-  cartProducts.push(elem);
-  localStorage.setItem("cart_products",JSON.stringify(cartProducts));
-}
-
-var bagProducts = JSON.parse(localStorage.getItem("bag_products"))|| [];
-
-function add_pro_bag_fun(elem){
-      
-  bagProducts.push(elem);
-  localStorage.setItem("bag_products",JSON.stringify(bagProducts));
-}
-
-function filter_fun(){
-    filter_gender_fun();
-    filter_brand_fun();
-    filter_skintype_fun();
-    sort_price_fun();
-    var gender_filtered = skincare_obj;  
-    function filter_gender_fun(){
-        selected_gender = document.getElementById("filter_gender").value;
-        gender_filtered = skincare_obj.filter(function(elem){
-            if(selected_gender === "all"){
-                return 1;
-            }
-
-            return elem.gender === selected_gender;
-        });
-        
-        //display_skincare(gender_filtered);
-    }
-
-    var brand_filtered = gender_filtered;
-    function filter_brand_fun(){
-        var selected_brand = document.getElementById("filter_brand").value;
-        brand_filtered = gender_filtered.filter(function(elem){
-            if(selected_brand === "all"){
-                return 1;
-            }
-            return elem.brand === selected_brand;
-        });
-        //console.log(brand_filtered);
-    }
-    //display_skincare(brand_filtered);
-
-    var skintype_filtered = brand_filtered;
-    function filter_skintype_fun(){
-        var selected_skintype = document.getElementById("filter_skin_type").value;
-        skintype_filtered = brand_filtered.filter(function(elem){
-            if(selected_skintype === "all"){
-                return 1;
-            }
-
-            return elem.skin_type === selected_skintype;
-        });
-        //display_skincare(skintype_filtered);
-    }
-
-    function sort_price_fun(){
-        if(document.getElementById("sort_price").value == 'high'){
-            skintype_filtered.sort(function(a,b){
-            if(parseInt(a.price)>parseInt(b.price)) return -1;
-            if(parseInt(a.price)<parseInt(b.price)) return 1;
-            return 0;
-          });
-        }
-  
-        if(document.getElementById("sort_price").value == 'low'){
-            skintype_filtered.sort(function(a,b){
-            if(parseInt(a.price)>parseInt(b.price)) return 1;
-            if(parseInt(a.price)<parseInt(b.price)) return -1;
-            return 0;
-          }); 
-        }
-        display_skincare(skintype_filtered);
-    }
-}
-
-
 var skincare_array = [
     //MOISTURIZERS
     {
@@ -577,3 +454,125 @@ var skincare_array = [
 ];
 
 localStorage.setItem("skincare_products", JSON.stringify(skincare_array));
+var skincare_obj = JSON.parse(localStorage.getItem("skincare_products")) || [];
+display_skincare(skincare_obj);
+
+function display_skincare(skin_array){
+    console.log(skin_array);
+    document.getElementById("product_display").innerHTML = "";
+    skin_array.map(function(elem,index){
+        var div2 = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",elem.image_url);
+        image.setAttribute("atl",elem.brand);
+        var name = document.createElement("h4");
+        name.innerText = elem.brand;
+        var info = document.createElement("p");
+        info.innerText = elem.description;
+        var div3 = document.createElement("div");
+        div3.setAttribute("id","rupees_value")
+        // var rupees = document.createElement("h4");
+        // rupees.innerText = "Rs. - ";
+        var value = document.createElement("h4");
+        value.innerText = "Rs. " + elem.price;
+        // div3.append(rupees,value); 
+        var add_to_cart = document.createElement("button");
+        add_to_cart.innerText = "Add to Cart";
+        add_to_cart.setAttribute("class","cart_bag");
+        add_to_cart.addEventListener("click",function(){
+            add_pro_cart_fun(elem);
+        });
+        var add_to_bag = document.createElement("button");
+        add_to_bag.innerText = "Add to Bag"; 
+        add_to_bag.addEventListener("click",function(){
+            add_pro_bag_fun(elem);
+        });
+        add_to_bag.setAttribute("class","cart_bag");
+        div2.append(image,name,info,value,add_to_cart);
+        document.getElementById("product_display").append(div2);
+    });
+
+}
+
+var cartProducts = JSON.parse(localStorage.getItem("cart_products"))|| [];
+
+function add_pro_cart_fun(elem){
+      
+  cartProducts.push(elem);
+  localStorage.setItem("cart_products",JSON.stringify(cartProducts));
+}
+
+var bagProducts = JSON.parse(localStorage.getItem("bag_products"))|| [];
+
+function add_pro_bag_fun(elem){
+      
+  bagProducts.push(elem);
+  localStorage.setItem("bag_products",JSON.stringify(bagProducts));
+}
+
+function filter_fun(){
+    filter_gender_fun();
+    filter_brand_fun();
+    filter_skintype_fun();
+    sort_price_fun();
+    var gender_filtered = skincare_obj;  
+    function filter_gender_fun(){
+        selected_gender = document.getElementById("filter_gender").value;
+        gender_filtered = skincare_obj.filter(function(elem){
+            if(selected_gender === "all"){
+                return 1;
+            }
+
+            return elem.gender === selected_gender;
+        });
+        
+        //display_skincare(gender_filtered);
+    }
+
+    var brand_filtered = gender_filtered;
+    function filter_brand_fun(){
+        var selected_brand = document.getElementById("filter_brand").value;
+        brand_filtered = gender_filtered.filter(function(elem){
+            if(selected_brand === "all"){
+                return 1;
+            }
+            return elem.brand === selected_brand;
+        });
+        //console.log(brand_filtered);
+    }
+    //display_skincare(brand_filtered);
+
+    var skintype_filtered = brand_filtered;
+    function filter_skintype_fun(){
+        var selected_skintype = document.getElementById("filter_skin_type").value;
+        skintype_filtered = brand_filtered.filter(function(elem){
+            if(selected_skintype === "all"){
+                return 1;
+            }
+
+            return elem.skin_type === selected_skintype;
+        });
+        //display_skincare(skintype_filtered);
+    }
+
+    function sort_price_fun(){
+        if(document.getElementById("sort_price").value == 'high'){
+            skintype_filtered.sort(function(a,b){
+            if(parseInt(a.price)>parseInt(b.price)) return -1;
+            if(parseInt(a.price)<parseInt(b.price)) return 1;
+            return 0;
+          });
+        }
+  
+        if(document.getElementById("sort_price").value == 'low'){
+            skintype_filtered.sort(function(a,b){
+            if(parseInt(a.price)>parseInt(b.price)) return 1;
+            if(parseInt(a.price)<parseInt(b.price)) return -1;
+            return 0;
+          }); 
+        }
+        display_skincare(skintype_filtered);
+    }
+}
+
+

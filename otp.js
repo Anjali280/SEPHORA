@@ -13,7 +13,8 @@ function checkotp(){
     event.preventDefault();
     var text = document.getElementById("otptext").value;
     if(text == 1234){
-        document.getElementById("result").innerText = "payment successful!";
+        // document.getElementById("result").innerText = "payment successful!";
+        window.location.href='order_successful.html';
     }else{
         document.getElementById("result").innerText = "Wrong OTP";
     }
