@@ -5,7 +5,7 @@ Sephora Collection, Sephora offers beauty products including cosmetics, skincare
 
 AS part of unit -4 construct week we cloned the frontend of sephora.com to the best of our ability in a team of 4 within the span of 5 days.
 
-##Deploy link
+##Deploy link - https://anjali280.github.io/SEPHORA/
 
 ##collaborators:
 Kajal Yadav
